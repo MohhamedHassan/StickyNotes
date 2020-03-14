@@ -1,0 +1,341 @@
+/*start global*/
+body {
+  font-family: "arial"; }
+
+a {
+  cursor: pointer; }
+
+::placeholder {
+  font-weight: bold;
+  color: black; }
+
+textarea {
+  resize: none; }
+
+button, .fas, .fa {
+  cursor: pointer; }
+
+ul {
+  margin: 0; }
+
+p {
+  margin-bottom: 0; }
+
+/* end global */
+/* start navbar */
+.navOne {
+  background: black;
+  color: white; }
+  .navOne .fas {
+    position: relative;
+    padding: 12px 30px;
+    font-size: 30px; }
+  .navOne .co:hover {
+    color: black;
+    background: #3c7fe2; }
+  .navOne .fa-home:after {
+    content: "Home";
+    width: 100px;
+    left: -5px; }
+  .navOne .fa-plus:after {
+    content: "Add a Note";
+    width: 100px;
+    left: -5px; }
+  .navOne .fa-list-alt:after {
+    content: "Add a To-Do List";
+    width: 170px;
+    left: -35px; }
+  .navOne .fa-image:after {
+    content: "Add an image";
+    width: 170px;
+    left: -35px; }
+  .navOne .fa-palette:after {
+    content: "Change Notes Background";
+    width: 250px;
+    left: -70px; }
+  .navOne .fa-paint-brush:after {
+    content: "Change Wall Background";
+    width: 250px;
+    left: -155px; }
+  .navOne .co:after {
+    position: absolute;
+    top: 70px;
+    color: white;
+    background: black;
+    padding: 10px;
+    text-align: center;
+    visibility: hidden;
+    font-size: small;
+    font-family: arial;
+    box-shadow: 0 0 10px 1px white;
+    z-index: 1; }
+  .navOne .co:hover:after {
+    visibility: visible; }
+
+@media (max-width: 768px) {
+  .navOne {
+    background: rgba(0, 0, 0, 0.5); }
+
+  .navOne .co:hover:after {
+    visibility: hidden; }
+
+  .navOne .co:hover {
+    color: white;
+    background: transparent; }
+
+  .ress {
+    position: relative; }
+
+  .bkgorunds {
+    width: auto !important;
+    left: 30% !important;
+    top: -287%; }
+
+  .bkgorunds li {
+    width: 20px !important;
+    height: 20px !important;
+    display: block !important;
+    margin-bottom: 10px; } }
+/* end navbar */
+/*  start pop up */
+.bacgrond-pop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1111111;
+  justify-content: center;
+  align-items: center; }
+  .bacgrond-pop img {
+    width: 20%;
+    height: 60px;
+    border: 1px solid transparent;
+    padding: 5px; }
+  .bacgrond-pop img:hover {
+    border: 1px solid #b6b0b0; }
+
+/*  end pop up */
+/* start notes section */
+.notes .fas {
+  padding: 5px 9px; }
+.notes .fas:not(.nohover):hover {
+  background: white;
+  color: gray; }
+.notes li {
+  display: inline-block;
+  color: white; }
+.notes .colors li {
+  width: 20px;
+  height: 20px; }
+
+.colors li:first-of-type, .bkgorunds li:first-of-type {
+  background: black; }
+
+.colors li:nth-of-type(2), .bkgorunds li:nth-of-type(2) {
+  background: white; }
+
+.colors li:nth-of-type(3), .bkgorunds li:nth-of-type(3) {
+  background: #ffff66; }
+
+.colors li:nth-of-type(4), .bkgorunds li:nth-of-type(4) {
+  background: #92ff8a; }
+
+.colors li:nth-of-type(5), .bkgorunds li:nth-of-type(5) {
+  background: #76d9ff; }
+
+.colors li:nth-of-type(6), .bkgorunds li:nth-of-type(6) {
+  background: #c484ed; }
+
+.colors li:nth-of-type(7), .bkgorunds li:nth-of-type(7) {
+  background: #fb5eee; }
+
+.colors li:last-of-type, .bkgorunds li:last-of-type {
+  background: red; }
+
+.bkgorunds {
+  position: absolute;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  padding: 17px;
+  z-index: 1; }
+  .bkgorunds li {
+    width: 70px;
+    height: 70px;
+    display: inline-block; }
+
+.fonts {
+  z-index: 1;
+  background: white;
+  color: black;
+  width: 100%;
+  border: 1px solid gray; }
+  .fonts p {
+    margin: 0;
+    padding: 5px 0 5px 10px; }
+  .fonts p:hover {
+    background: gray;
+    color: white; }
+  .fonts p:not(:last-of-type) {
+    border-bottom: 1px solid gray; }
+
+.fo-si {
+  background: white;
+  color: black !important;
+  padding: 0 5px; }
+
+.content > div:hover {
+  background: white; }
+
+/* end notes section */
+/* start navTwo */
+.navTwo {
+  background: black; }
+  .navTwo a {
+    color: white !important;
+    padding: 12px 20px;
+    text-transform: capitalize; }
+  .navTwo li a:hover {
+    background: white;
+    color: black !important; }
+  .navTwo .active {
+    background: #4baad3;
+    color: black !important; }
+  .navTwo a {
+    transition: .5s; }
+
+@media (max-width: 768px) {
+  .navTwo .logo {
+    display: inline-block; }
+
+  .navTwo ul {
+    padding-left: 20px !important;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    display: none; }
+
+  .navTwo a {
+    width: 75px;
+    display: block;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    padding: 0; }
+
+  .navTwo .fa-bars {
+    color: white;
+    font-size: 30px;
+    float: right;
+    margin-top: 6px; } }
+/* end navTwo */
+/* start home header */
+.whyYou ::selection,
+.allAbout ::selection,
+.frm ::selection,
+header ::selection {
+  background: #000000;
+  color: #ffffff; }
+
+header {
+  background: #4baad3; }
+  header .first h1 {
+    margin-bottom: 50px; }
+  header .first li span:first-of-type {
+    width: 60px;
+    display: inline-block; }
+  header .second {
+    background: #3a9ac4; }
+    header .second div > span {
+      font-size: 25px; }
+  header i {
+    font-size: 30px; }
+  header ul span:last-of-type {
+    font-size: 25px; }
+  header li {
+    margin-bottom: 30px; }
+  header button {
+    background: #25647f;
+    border: navajowhite;
+    padding: 20px 40px;
+    color: white; }
+    header button i {
+      font-size: 20px; }
+
+/* end home header */
+/* start all about section */
+.whyYou, .allAbout {
+  padding: 100px 0;
+  background: white; }
+
+.whyYou h2,
+.allAbout h2,
+.frm h2 {
+  font-size: 45px; }
+
+.allAbout h3 {
+  font-size: 35px; }
+
+.allAbout p:first-of-type {
+  font-size: 25px; }
+
+/* end all about  section*/
+/* start why you  section */
+.whyYou h3 {
+  font-weight: bold; }
+.whyYou i {
+  color: #3a9ac4;
+  font-size: 25px; }
+
+@media (max-width: 768px) {
+  .whyYou h2 {
+    font-size: 38px; } }
+/* end why you section */
+/* strat form */
+.frm {
+  background: #3a9ac4;
+  padding: 100px 0; }
+  .frm textarea {
+    height: 180px !important; }
+  .frm input {
+    padding: 30px 0px 30px 10px !important; }
+  .frm button {
+    background: #2b7797;
+    border: none;
+    color: white;
+    padding: 19px 0;
+    border-radius: 6px; }
+
+/* end form */
+/* strat footer */
+footer {
+  background: black;
+  color: white;
+  font-weight: bold; }
+  footer a, footer span {
+    color: #3083a7 !important;
+    padding: 0 10px;
+    cursor: pointer; }
+
+/* end footer */
+/* start scroll button */
+.fa-sort-up {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  color: white;
+  background: tomato;
+  width: 40px;
+  height: 40px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 50%;
+  display: none; }
+
+/* end scroll button */
+
+/*# sourceMappingURL=style.css.map */

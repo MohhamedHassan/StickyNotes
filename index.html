@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!--font awesome cdn-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <!--bootstrap cdn-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Sticky Notes</title>
+    </head>
+    <body id="one" style="padding-top: 40px">
+           <!--start nav bar -->
+        <nav class="fixed-top navOne">
+           <div class="container d-md-flex justify-content-between align-items-center">
+                <div class=" d-flex justify-content-between align-items-center">
+                        <div class="logo"><img src="images/logo.png"></div>
+                        <i class="fas fa-bars d-md-none showNav"></i>
+                </div>
+                <div class="icons d-none  d-md-block" style="flex-direction: column">
+                        <a href="info.html" class="text-white" target="_blank"> <i class="fas co fa-home"></i></a>
+                         <i class="fas co fa-plus listt" id="plus"></i>
+                         <i class="fas co fa-list-alt listt" id="to-do-list"></i>
+                         <div class="d-inline-block ress">
+                             <i class="fas fa-palette listt co ze" id="bkGround"></i>
+                             <ul class="d-none listts list-unstyled bkgorunds zee">
+                                 <li onclick="chngBkGround('black')" class="listt"></li>
+                                 <li onclick="chngBkGround('white')" class="listt"></li>
+                                 <li onclick="chngBkGround('rgb(255, 255, 102)')" class="listt"></li>
+                                 <li onclick="chngBkGround('rgb(146, 255, 138)')" class="listt"></li>
+                                 <li onclick="chngBkGround('rgb(118, 217, 255)')" class="listt"></li>
+                                 <li onclick="chngBkGround('rgb(196, 132, 237)')" class="listt"></li>
+                                 <li onclick="chngBkGround('rgb(251, 94, 238)')" class="listt"></li>
+                                 <li onclick="chngBkGround('red')" class="listt"></li>
+                             </ul>
+                         </div>
+                         <i class="fas fa-paint-brush co" id="bdy"></i>
+          
+             </div>
+           </div>
+
+        </nav>
+        <!--end nav bar -->
+    <!--start second pop up -->
+    <div class="d-none bacgrond-pop text-center">
+              <div class="p-4 bg-white w-75">
+                    
+                        <h5 class=" mb-4">Wall Background</h5>
+                      <div class="text-center"> 
+                                <img src="images/cork.jpg" onclick="chngbody('images/cork.jpg')">
+                                <img src="images/metal.jpg" onclick="chngbody('images/metal.jpg')">
+                                <img src="images/bamboo.jpg" onclick="chngbody('images/bamboo.jpg')">
+                                <img src="images/wood.jpg" onclick="chngbody('images/wood.jpg')">
+                        </div>
+                   
+                        <div class="text-center mt-5"><button class="btn btn-dark " id="closBcPop">Close</button></div>
+              </div>
+    </div>
+    <!--end first pop up -->
+  <div class="container">
+        <p style="display: none" class="ss alert  alert-danger my-5 text-center w-50 mx-auto font-weight-bold">select any text area</p>
+  </div>
+    <!--start first section-->
+       <div class="clearfix"></div>
+        <section class="notes mt-5" >
+              <div class="container"> 
+                  <div class="row" id="rows"> 
+                  
+                  </div>
+
+              </div>
+        </section>
+    <!--end first section-->
+
+
+
+
+           <!--bootstrap cdn-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
+
+
+
